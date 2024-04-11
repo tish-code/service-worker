@@ -30,7 +30,7 @@ export const TopNav = () => {
                     className={`mr-[40px] pb-2 transition-all ${
                       isCurrentpage
                         ? "border-b-2 border-blue-100 font-semibold"
-                        : "border-b-2 border-transparent hover:border-blue-100"
+                        : "border-b-2 border-transparent hover:border-blue-300"
                     }`}
                   >
                     {item.name}
