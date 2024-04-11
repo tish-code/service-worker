@@ -10,6 +10,10 @@ export default {
         "hero-small": "url('/src/assets/hero-solar-small.jpg')",
         "hero-large": "url('/src/assets/hero-solar-large.jpg')",
       },
+      textColor: {
+        primary: "#fafafc",
+        secondary: "#0a50c9",
+      },
     },
   },
   plugins: [],
