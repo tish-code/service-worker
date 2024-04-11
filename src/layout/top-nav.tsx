@@ -14,9 +14,9 @@ export const TopNav = (props: IProps) => {
   const location = useLocation();
   return (
     <div className="sticky flex flex-auto items-center justify-between text-primary top-0 inset-x-0 py-4 px-4 lg:px-32 bg-primary">
-      <div className="font-bold text-[1.2em]">
+      <Link to={"/"} className="font-bold text-[1.2em]">
         SOLAR<span className="text-[#FDB813]">ONE</span>
-      </div>
+      </Link>
       <div className="hidden lg:flex justify-between">
         <div className="flex">
           {navigations.map((item: INav, index) => {
@@ -37,12 +37,15 @@ export const TopNav = (props: IProps) => {
           })}
         </div>
       </div>
-      <div className="hidden lg:flex items-center text-secondary p-2 bg-blue-50 rounded-md font-medium cursor-pointer hover:bg-opacity-80 transition-all">
+      <Link
+        to={"/contact-us"}
+        className="hidden lg:flex items-center text-secondary p-2 bg-blue-50 rounded-md font-medium cursor-pointer hover:bg-opacity-80 transition-all"
+      >
         <span>Contact us</span>
         <svg className="text-secondary w-[1.3em] h-[1em] inline-block cursor-pointer ml-2">
           <ArrowRightIcon />
         </svg>
-      </div>
+      </Link>
       <button className="lg:hidden" onClick={onNavOpen}>
         <svg className="text-white w-[2em] h-[2em] inline-block cursor-pointer">
           <Bars3Icon />

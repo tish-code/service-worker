@@ -3,11 +3,20 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import { Layout } from "./layout/layout.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/contact-us",
+    element: (
+      <Layout>
+        <h1>Hello</h1>
+      </Layout>
+    ),
   },
 ]);
 

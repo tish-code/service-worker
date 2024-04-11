@@ -7,7 +7,7 @@ const navigations: INav[] = [
   { route: "/", name: "Home" },
   { route: "/about", name: "About us" },
   { route: "/services", name: "Services" },
-  { route: "/contact", name: "Contact Us" },
+  { route: "/contact-us", name: "Contact Us" },
 ];
 
 export const SideNav = (props: IProps) => {
@@ -19,18 +19,18 @@ export const SideNav = (props: IProps) => {
         <AnimatePresence>
           {open && (
             <motion.div
-              className="fixed top-0 right-0 flex flex-col w-[200px] h-full bg-primary p-2 text-primary lg:hidden"
+              className="fixed top-0 right-0 flex flex-col w-[240px] h-full bg-primary p-2 text-primary lg:hidden"
               initial={{
-                right: -210,
+                right: -250,
               }}
               animate={{
                 right: 0,
               }}
               transition={{
-                duration: 1,
+                duration: 0.3,
               }}
               exit={{
-                right: -210,
+                right: -250,
               }}
             >
               <button onClick={onNavClose} className="ml-auto mb-2 p-2">
