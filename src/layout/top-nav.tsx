@@ -3,7 +3,7 @@ import ArrowRightIcon from "@heroicons/react/24/solid/ArrowRightIcon";
 import { Link, useLocation } from "react-router-dom";
 import { INav, IProps } from "./types";
 
-const navigation: INav[] = [
+const navigations: INav[] = [
   { route: "/", name: "Home" },
   { route: "/about", name: "About us" },
   { route: "/services", name: "Services" },
@@ -13,28 +13,26 @@ export const TopNav = (props: IProps) => {
   const { onNavOpen } = props;
   const location = useLocation();
   return (
-    <div className="sticky flex flex-auto items-center justify-between text-primary top-0 inset-x-0 py-4 px-4 lg:px-32 bg-[#0a50c9]">
+    <div className="sticky flex flex-auto items-center justify-between text-primary top-0 inset-x-0 py-4 px-4 lg:px-32 bg-primary">
       <div className="font-bold text-[1.2em]">
         SOLAR<span className="text-[#FDB813]">ONE</span>
       </div>
       <div className="hidden lg:flex justify-between">
         <div className="flex">
-          {navigation.map((item: INav, index) => {
+          {navigations.map((item: INav, index) => {
             const isCurrentpage = item.route === location.pathname;
             return (
-              <div key={index}>
-                <Link to={item.route}>
-                  <div
-                    className={`mr-[40px] pb-2 transition-all duration-500 ${
-                      isCurrentpage
-                        ? "border-b-2 border-blue-100 font-semibold"
-                        : "border-b-2 border-transparent hover:border-blue-200"
-                    }`}
-                  >
-                    {item.name}
-                  </div>
-                </Link>
-              </div>
+              <Link to={item.route} key={index}>
+                <div
+                  className={`mr-[40px] pb-2 transition-all duration-500 ${
+                    isCurrentpage
+                      ? "border-b-2 border-blue-100 font-semibold"
+                      : "border-b-2 border-transparent hover:border-blue-200"
+                  }`}
+                >
+                  {item.name}
+                </div>
+              </Link>
             );
           })}
         </div>
