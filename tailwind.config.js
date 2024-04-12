@@ -3,7 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["Inter", "Lato", "sans-serif"],
+      sans: ["Lato", "DM Sans", "Inter", "sans-serif"],
+      large: ["DM Sans", "Inter"],
     },
     extend: {
       backgroundImage: {
