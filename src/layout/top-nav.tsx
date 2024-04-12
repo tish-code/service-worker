@@ -13,7 +13,7 @@ export const TopNav = (props: IProps) => {
   const { onNavOpen } = props;
   const location = useLocation();
   return (
-    <div className="sticky flex flex-auto items-center justify-between text-primary top-0 inset-x-0 py-4 px-4 lg:px-32 bg-primary">
+    <div className="sticky flex flex-auto items-center justify-between text-primary top-0 inset-x-0 py-4 px-[1em] lg:px-32 bg-primary">
       <Link to={"/"} className="font-bold text-[1.2em]">
         SOLAR<span className="text-[#FDB813]">ONE</span>
       </Link>
