@@ -1,11 +1,13 @@
 import { Layout } from "./layout/layout";
 import { Hero } from "./sections/hero/hero";
+import { SectionOne } from "./sections/section-one";
 
 function App() {
   return (
-    <main>
-      <Layout>
+    <Layout>
+      <main className="">
         <Hero />
+        <SectionOne />
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
@@ -27,8 +29,8 @@ function App() {
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-      </Layout>
-    </main>
+      </main>
+    </Layout>
   );
 }
 

@@ -17,6 +17,7 @@ export default {
       textColor: {
         primary: "#fafafc",
         secondary: "#0a50c9",
+        dark: "#1f2937",
       },
     },
   },
