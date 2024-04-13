@@ -13,11 +13,13 @@ export default {
       },
       backgroundColor: {
         primary: "#0a50c9",
+        amber: "#FFBB1C",
       },
       textColor: {
         primary: "#fafafc",
         secondary: "#0a50c9",
         dark: "#1f2937",
+        amber: "#FFBB1C",
       },
     },
   },

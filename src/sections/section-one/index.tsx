@@ -1,3 +1,5 @@
+import rectangle3 from "../../assets/rectangle3.png";
+
 const stats = [
   { sn: "01/", text: "Collaborate with 100+ leading" },
   { sn: "02/", text: " 100+ leading universities and companies" },
@@ -6,9 +8,9 @@ const stats = [
 ];
 export const SectionOne = () => {
   return (
-    <div className="px-[1em] lg:px-[8em] text-dark pt-[4em]">
-      <div className="flex flex-col gap-[1.5em]">
-        <p className="text-[1.5em] md:text-[2.2em] font-semibold font-large">
+    <div className="px-[1em] lg:px-[8em] text-dark py-[4em] flex flex-col md:flex-row gap-[2em] ">
+      <div className="flex flex-col gap-[1.5em] flex-1 lg:pt-[2em]">
+        <p className="text-[1.7em] md:text-[2.2em] font-semibold font-large">
           The Friendliest Installers in the West
         </p>
         <p className="text-[0.9em]">
@@ -30,7 +32,9 @@ export const SectionOne = () => {
           })}
         </div>
       </div>
-      <div></div>
+      <div className="flex flex-1 max-w-[550px]">
+        <img src={rectangle3} alt="solar" className="ml-auto h-full w-full" />
+      </div>
     </div>
   );
 };

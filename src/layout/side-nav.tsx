@@ -19,7 +19,7 @@ export const SideNav = (props: IProps) => {
         <AnimatePresence>
           {open && (
             <motion.div
-              className="fixed top-0 right-0 flex flex-col w-[240px] h-full bg-primary p-2 text-primary lg:hidden"
+              className="fixed top-0 right-0 flex flex-col w-[240px] h-full bg-primary p-2 text-primary lg:hidden z-50"
               initial={{
                 right: -250,
               }}
