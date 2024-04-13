@@ -19,7 +19,7 @@ const whatWeOffer = [
 export const WhyChooseUs = () => {
   return (
     <div className="px-[1em] text-dark lg:px-[8em] py-[4em] bg-gray-400 bg-opacity-30 flex flex-col gap-[2em]">
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-[1em]">
         <p className="text-[#0362fc] flex items-center gap-2 text-[0.7em]">
           <span>
             <img src={sun} alt="" />

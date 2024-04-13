@@ -14,6 +14,7 @@ export default {
       backgroundColor: {
         primary: "#0a50c9",
         amber: "#FFBB1C",
+        dark: "#1f2937",
       },
       textColor: {
         primary: "#fafafc",
