@@ -8,8 +8,8 @@ const stats = [
 ];
 export const SectionOne = () => {
   return (
-    <div className="px-[1em] lg:px-[8em] text-dark py-[4em] flex flex-col md:flex-row gap-[2em] ">
-      <div className="flex flex-col gap-[1.5em] flex-1 lg:pt-[2em]">
+    <div className="px-[1em] lg:px-[8em] text-dark py-[4em] flex flex-col md:flex-row gap-[2em]  justify-between">
+      <div className="flex flex-col gap-[1.5em] flex-1">
         <p className="text-[1.7em] md:text-[2.2em] font-semibold font-large">
           The Friendliest Installers in the West
         </p>
@@ -32,8 +32,8 @@ export const SectionOne = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-1 max-w-[550px]">
-        <img src={rectangle3} alt="solar" className="ml-auto h-full w-full" />
+      <div className="flex flex-1 max-w-[550px] justify-center">
+        <img src={rectangle3} alt="solar" className="w-[80%]" />
       </div>
     </div>
   );
