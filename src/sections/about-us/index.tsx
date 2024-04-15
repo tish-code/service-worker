@@ -48,7 +48,9 @@ export const AboutUs = () => {
           <p className="font-semibold text-[1.2em]">Our Missions :</p>
           {ourMission.map((item, index) => (
             <p
-              className={`text-[0.8em] border bg-slate-100 p-[1em] rounded-xl`}
+              className={`text-[0.8em] border p-[1em] rounded-xl ${
+                index === 0 ? "bg-blue-500 text-white" : "bg-slate-100"
+              }`}
               key={index}
             >
               {item.text}
