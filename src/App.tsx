@@ -1,5 +1,6 @@
 import { Layout } from "./layout/layout";
 import { AboutUs } from "./sections/about-us";
+import { Footer } from "./sections/footer";
 import { Hero } from "./sections/hero/hero";
 import { OurServices } from "./sections/our-services";
 import { RecentProject } from "./sections/recent-projects";
@@ -18,27 +19,7 @@ function App() {
         <OurServices />
         <RecentProject />
         <Testimonials />
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
-        <h2 className="text-[40px]">Welcome to solar Lorem</h2>
+        <Footer />
       </main>
     </Layout>
   );
