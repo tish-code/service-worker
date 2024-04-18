@@ -4,6 +4,7 @@ import { Hero } from "./sections/hero/hero";
 import { OurServices } from "./sections/our-services";
 import { RecentProject } from "./sections/recent-projects";
 import { SectionOne } from "./sections/section-one";
+import { Testimonials } from "./sections/testimonials";
 import { WhyChooseUs } from "./sections/why-choose-us";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <AboutUs />
         <OurServices />
         <RecentProject />
+        <Testimonials />
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
         <h2 className="text-[40px]">Welcome to solar Lorem</h2>
