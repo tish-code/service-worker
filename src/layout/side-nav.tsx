@@ -1,18 +1,17 @@
 import { INav, IProps } from "./types";
 import { motion, AnimatePresence } from "framer-motion";
 import XMarkIcon from "@heroicons/react/24/solid/XMarkIcon";
-import { Link, useLocation } from "react-router-dom";
 
 const navigations: INav[] = [
   { route: "/", name: "Home" },
   { route: "/about", name: "About us" },
   { route: "/services", name: "Services" },
-  { route: "/contact-us", name: "Contact Us" },
+  { route: "/contact-us", name: "Contact" },
 ];
 
 export const SideNav = (props: IProps) => {
-  const location = useLocation();
   const { onNavClose, open } = props;
+
   return (
     <>
       {
@@ -39,19 +38,20 @@ export const SideNav = (props: IProps) => {
                 </svg>
               </button>
               {navigations.map((item: INav, index) => {
-                const isCurrentpage = item.route === location.pathname;
                 return (
-                  <Link
-                    to={item.route}
+                  <div
                     key={index}
-                    className={`mb-2 p-2 transition-all duration-500 rounded-md ${
-                      isCurrentpage
-                        ? "bg-blue-700 font-semibold"
-                        : " hover:bg-blue-700"
-                    }`}
+                    onClick={() => {
+                      item.name === "Home"
+                        ? props.navMethods.toHome()
+                        : item.name === "About us"
+                        ? props.navMethods.toAbout()
+                        : props.navMethods.toServices();
+                    }}
+                    className={`mb-2 p-2 transition-all duration-500 rounded-md hover:bg-blue-700 cursor-pointer`}
                   >
                     <div>{item.name}</div>
-                  </Link>
+                  </div>
                 );
               })}
             </motion.div>

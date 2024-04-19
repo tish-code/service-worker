@@ -42,7 +42,7 @@ export const WhyChooseUs = () => {
         })}
       </div>
       <div
-        className="border hidden lg:flex 
+        className="border flex 
         border-[#a1a1a1]"
       ></div>
     </div>

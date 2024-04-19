@@ -12,9 +12,13 @@ const ourMission = [
   },
 ];
 
-export const AboutUs = () => {
+export const AboutUs = (props: any) => {
+  const { aboutUsRef } = props;
   return (
-    <div className="px-[1em] lg:px-[8em] flex flex-col md:flex-row py-[4em] gap-[3em] text-dark">
+    <div
+      ref={aboutUsRef}
+      className="px-[1em] lg:px-[8em] flex flex-col md:flex-row py-[4em] gap-[3em] text-dark"
+    >
       <div className="flex gap-[2em] flex-col  flex-1">
         <div className="bg-dark p-[8em] rounded-3xl"></div>
         <div className="bg-dark p-[5em] rounded-3xl">

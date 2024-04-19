@@ -23,9 +23,12 @@ const strides = [
   { title: "20+", text: "Country Served" },
   { title: "1.3k", text: "Successful Installations" },
 ];
-export const OurServices = () => {
+export const OurServices = ({ serviceRef }: any) => {
   return (
-    <div className="px-[1em] lg:px-[8em] bg-dark py-[4em] flex flex-col gap-[2em]">
+    <div
+      className="px-[1em] lg:px-[8em] bg-dark py-[4em] flex flex-col gap-[2em]"
+      ref={serviceRef}
+    >
       <div className="flex flex-col gap-[1.5em]">
         <p className="text-[#0362fc] flex items-center gap-2 text-[0.7em] m-auto">
           <span>
@@ -65,7 +68,7 @@ export const OurServices = () => {
           );
         })}
       </div>
-      <div className="hidden border border-gray-500 md:flex"></div>
+      <div className="flex border border-gray-500"></div>
       <div className="flex flex-col md:flex-row gap-[2em]">
         {strides.map((item, index) => {
           const isIndex = index === 1;

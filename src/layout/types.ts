@@ -6,4 +6,5 @@ export interface IProps {
   onNavOpen?: () => void;
   onNavClose?: () => void;
   open?: boolean;
+  navMethods?: any;
 }
