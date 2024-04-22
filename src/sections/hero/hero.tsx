@@ -31,15 +31,15 @@ export const Hero = () => {
             <div className="flex flex-wrap transition duration-300 gap-4">
               <Link
                 to={"/contact-us"}
-                className="flex-none items-center py-3 px-4 bg-white text-blue-600 rounded-xl bg-opacity-90 hover:bg-opacity-100"
+                className="flex-none items-center py-2 px-3 font-semibold bg-white text-blue-600 rounded-lg bg-opacity-90 hover:bg-opacity-100"
               >
                 Call us Today
               </Link>
               <Link
                 to={"/contact-us"}
-                className="flex-none items-center py-3 px-4 bg-[#fcbe03] text-white rounded-xl bg-opacity-90 hover:bg-opacity-100"
+                className="flex-none items-center py-2 px-3 font-semibold bg-[#fccf03] text-white rounded-lg bg-opacity-90 hover:bg-opacity-100"
               >
-                Request a call back
+                Get Quote
               </Link>
             </div>
           </div>

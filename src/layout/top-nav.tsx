@@ -1,5 +1,5 @@
 import Bars3Icon from "@heroicons/react/24/solid/Bars3Icon";
-import ArrowRightIcon from "@heroicons/react/24/solid/ArrowRightIcon";
+import { PhoneArrowDownLeftIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { INav, IProps } from "./types";
 
@@ -14,7 +14,7 @@ export const TopNav = (props: IProps) => {
   return (
     <div className="sticky flex flex-auto items-center justify-between text-primary top-0 inset-x-0 py-4 px-[1em] lg:px-[8em] bg-primary z-40">
       <Link to={"/"} className="font-bold text-[1.2em]">
-        SOLAR<span className="text-[#FDB813]">ONE</span>
+        SOLAR<span className="text-[#fda917]">ONE</span>
       </Link>
       <div className="hidden lg:flex justify-between">
         <div className="flex">
@@ -46,7 +46,7 @@ export const TopNav = (props: IProps) => {
       >
         <span>Contact us</span>
         <svg className="text-secondary w-[1.3em] h-[1em] inline-block cursor-pointer ml-2">
-          <ArrowRightIcon />
+          <PhoneArrowDownLeftIcon />
         </svg>
       </button>
       <button className="lg:hidden" onClick={onNavOpen}>
