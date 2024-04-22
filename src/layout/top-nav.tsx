@@ -42,7 +42,7 @@ export const TopNav = (props: IProps) => {
       </div>
       <button
         className="hidden lg:flex items-center text-secondary p-2 bg-blue-50 rounded-md font-medium cursor-pointer bg-opacity-95 hover:bg-opacity-100 transition-all"
-        onClick={navMethods.toServices}
+        onClick={navMethods.toContact}
       >
         <span>Contact us</span>
         <svg className="text-secondary w-[1.3em] h-[1em] inline-block cursor-pointer ml-2">

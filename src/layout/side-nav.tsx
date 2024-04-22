@@ -46,7 +46,9 @@ export const SideNav = (props: IProps) => {
                         ? props.navMethods.toHome()
                         : item.name === "About us"
                         ? props.navMethods.toAbout()
-                        : props.navMethods.toServices();
+                        : item.name === "Services"
+                        ? props.navMethods.toServices()
+                        : props.navMethods.toContact();
                     }}
                     className={`mb-2 p-2 transition-all duration-500 rounded-md hover:bg-blue-700 cursor-pointer`}
                   >
