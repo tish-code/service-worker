@@ -3,6 +3,7 @@ import mail from "../../assets/mail.svg";
 import location from "../../assets/location.svg";
 import { useState } from "react";
 import { FormControl, TextField } from "@material-ui/core";
+import { motion } from "framer-motion";
 
 const contacts = [
   { icon: phone, contact: "+1012 3456 789" },
@@ -22,7 +23,12 @@ export const ContactUs = (props: any) => {
       className="flex flex-col lg:flex-row gap-[2em] lg:px-[8em] py-[4em] px-[1em]"
       ref={contactUsRef}
     >
-      <div className="flex flex-col p-[2em] bg-dark gap-[4em] flex-1 rounded-2xl">
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7, type: "spring", delay: 0.3 }}
+        className="flex flex-col p-[2em] bg-dark gap-[4em] flex-1 rounded-2xl"
+      >
         <div className="flex flex-col gap-1">
           <p className="text-[1.5em] font-semibold">Contact Information</p>
           <p className="text-[0.8em]">
@@ -97,9 +103,12 @@ export const ContactUs = (props: any) => {
             </svg>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* Get Quote Section */}
-      <div
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7, type: "spring", delay: 0.3 }}
         className="flex flex-col p-[2em] gap-4 text-dark flex-1"
         ref={getQuoteRef}
       >
@@ -129,7 +138,7 @@ export const ContactUs = (props: any) => {
             Send Message
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

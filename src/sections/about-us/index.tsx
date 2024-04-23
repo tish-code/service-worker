@@ -1,4 +1,5 @@
 import sun from "../../assets/sun.svg";
+import { motion } from "framer-motion";
 
 const ourMission = [
   {
@@ -19,7 +20,12 @@ export const AboutUs = (props: any) => {
       ref={aboutUsRef}
       className="px-[1em] lg:px-[8em] flex flex-col md:flex-row py-[4em] gap-[3em] text-dark"
     >
-      <div className="flex gap-[2em] flex-col  flex-1">
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7, type: "spring", delay: 0.3 }}
+        className="flex gap-[2em] flex-col  flex-1"
+      >
         <div className="bg-dark p-[8em] rounded-3xl"></div>
         <div className="bg-dark p-[5em] rounded-3xl">
           <p className="text-[2.5em] text-center text-[rgba(255,255,255,0.9)] ">
@@ -29,8 +35,13 @@ export const AboutUs = (props: any) => {
             Ratings from customer
           </p>
         </div>
-      </div>
-      <div className="flex flex-1 flex-col gap-[2em]">
+      </motion.div>
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.7, type: "spring", delay: 0.3 }}
+        className="flex flex-1 flex-col gap-[2em]"
+      >
         <div className="flex flex-col gap-[1em]">
           <p className="text-[#0362fc] flex items-center gap-2 text-[0.7em]">
             <span>
@@ -61,7 +72,7 @@ export const AboutUs = (props: any) => {
             </p>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
