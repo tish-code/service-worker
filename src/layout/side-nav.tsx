@@ -1,4 +1,4 @@
-import { INav, IProps } from "./types";
+import { INav } from "./types";
 import { motion, AnimatePresence } from "framer-motion";
 import XMarkIcon from "@heroicons/react/24/solid/XMarkIcon";
 
@@ -9,6 +9,11 @@ const navigations: INav[] = [
   { route: "/contact-us", name: "Contact" },
 ];
 
+interface IProps {
+  onNavClose: () => void;
+  open: boolean;
+  navMethods: any;
+}
 export const SideNav = (props: IProps) => {
   const { onNavClose, open } = props;
 
@@ -49,6 +54,8 @@ export const SideNav = (props: IProps) => {
                         : item.name === "Services"
                         ? props.navMethods.toServices()
                         : props.navMethods.toContact();
+
+                      onNavClose();
                     }}
                     className={`mb-2 p-2 text-left transition-all duration-500 rounded-md hover:bg-blue-700`}
                   >

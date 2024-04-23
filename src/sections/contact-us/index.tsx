@@ -19,7 +19,7 @@ export const ContactUs = (props: any) => {
   const [isDark3, setIsDark3] = useState(false);
   return (
     <div
-      className="flex flex-col md:flex-row gap-[2em] lg:px-[8em] py-[4em] px-[1em]"
+      className="flex flex-col lg:flex-row gap-[2em] lg:px-[8em] py-[4em] px-[1em]"
       ref={contactUsRef}
     >
       <div className="flex flex-col p-[2em] bg-dark gap-[4em] flex-1 rounded-2xl">
@@ -119,7 +119,11 @@ export const ContactUs = (props: any) => {
             <TextField label="Phone Number" />
           </div>
           <FormControl fullWidth>
-            <TextField label="Message" placeholder="write us a message" />
+            <TextField
+              multiline
+              label="Message"
+              placeholder="write us a message"
+            />
           </FormControl>
           <button className="bg-dark bg-opacity-90 hover:bg-opacity-100 transition duration-300 text-white shrink py-3 px-3 font-semibold rounded-md ml-auto">
             Send Message
