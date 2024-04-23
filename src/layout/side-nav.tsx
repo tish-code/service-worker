@@ -39,7 +39,7 @@ export const SideNav = (props: IProps) => {
               </button>
               {navigations.map((item: INav, index) => {
                 return (
-                  <div
+                  <button
                     key={index}
                     onClick={() => {
                       item.name === "Home"
@@ -50,10 +50,10 @@ export const SideNav = (props: IProps) => {
                         ? props.navMethods.toServices()
                         : props.navMethods.toContact();
                     }}
-                    className={`mb-2 p-2 transition-all duration-500 rounded-md hover:bg-blue-700 cursor-pointer`}
+                    className={`mb-2 p-2 text-left transition-all duration-500 rounded-md hover:bg-blue-700`}
                   >
                     <div>{item.name}</div>
-                  </div>
+                  </button>
                 );
               })}
             </motion.div>

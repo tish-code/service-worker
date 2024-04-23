@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-
-export const Hero = () => {
+export const Hero = (props: any) => {
+  const { navMethods } = props;
   return (
     <div className="bg-blue-400 bg-hero-small md:bg-hero-large bg-cover bg-center">
       <div
@@ -29,18 +28,18 @@ export const Hero = () => {
               Today.
             </p>
             <div className="flex flex-wrap transition duration-300 gap-4">
-              <Link
-                to={"/contact-us"}
+              <button
+                onClick={() => navMethods.toContact()}
                 className="flex-none items-center py-2 px-3 font-semibold bg-white text-blue-600 rounded-lg bg-opacity-90 hover:bg-opacity-100"
               >
                 Call us Today
-              </Link>
-              <Link
-                to={"/contact-us"}
+              </button>
+              <button
+                onClick={() => navMethods.toGetQuote()}
                 className="flex-none items-center py-2 px-3 font-semibold bg-[#fccf03] text-white rounded-lg bg-opacity-90 hover:bg-opacity-100"
               >
                 Get Quote
-              </Link>
+              </button>
             </div>
           </div>
         </div>

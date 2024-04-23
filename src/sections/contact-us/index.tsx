@@ -2,6 +2,7 @@ import phone from "../../assets/phone.svg";
 import mail from "../../assets/mail.svg";
 import location from "../../assets/location.svg";
 import { useState } from "react";
+import { FormControl, TextField } from "@material-ui/core";
 
 const contacts = [
   { icon: phone, contact: "+1012 3456 789" },
@@ -12,7 +13,7 @@ const contacts = [
   },
 ];
 export const ContactUs = (props: any) => {
-  const { contactUsRef } = props;
+  const { contactUsRef, getQuoteRef } = props;
   const [isDark1, setIsDark1] = useState(false);
   const [isDark2, setIsDark2] = useState(false);
   const [isDark3, setIsDark3] = useState(false);
@@ -97,13 +98,32 @@ export const ContactUs = (props: any) => {
           </div>
         </div>
       </div>
-      {/* <div className="bg-white"></div> */}
-      <div className="flex flex-col p-[2em] gap-[2em] text-dark flex-1">
+      {/* Get Quote Section */}
+      <div
+        className="flex flex-col p-[2em] gap-4 text-dark flex-1"
+        ref={getQuoteRef}
+      >
         <div className="flex flex-col gap-1">
           <p className="text-[1.5em] font-semibold">Get Quote</p>
           <p className="text-[0.8em]">
             Write to us your needs and we'll email you the quotes. It's free!
           </p>
+        </div>
+        <div className="flex flex-col gap-6">
+          <div className="flex gap-[2em]">
+            <TextField label="First Name" />
+            <TextField label="Last Name" />
+          </div>
+          <div className="flex gap-[2em]">
+            <TextField label="Email" />
+            <TextField label="Phone Number" />
+          </div>
+          <FormControl fullWidth>
+            <TextField label="Message" placeholder="write us a message" />
+          </FormControl>
+          <button className="bg-dark bg-opacity-90 hover:bg-opacity-100 transition duration-300 text-white shrink py-3 px-3 font-semibold rounded-md ml-auto">
+            Send Message
+          </button>
         </div>
       </div>
     </div>

@@ -14,7 +14,8 @@ function App() {
   const aboutUsRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
   const ourServiceRef = useRef<HTMLDivElement>(null);
-  const contactUseRef = useRef<HTMLDivElement>(null);
+  const contactUsRef = useRef<HTMLDivElement>(null);
+  const getQuoteRef = useRef<HTMLDivElement>(null);
 
   const scrollToAbout = () => {
     if (aboutUsRef.current) {
@@ -41,9 +42,17 @@ function App() {
     }
   };
   const scrollToContact = () => {
-    if (contactUseRef.current) {
+    if (contactUsRef.current) {
       window.scrollTo({
-        top: contactUseRef.current.offsetTop - 64,
+        top: contactUsRef.current.offsetTop - 64,
+        behavior: "smooth",
+      });
+    }
+  };
+  const scrollToGetQuote = () => {
+    if (getQuoteRef.current) {
+      window.scrollTo({
+        top: getQuoteRef.current.offsetTop - 64,
         behavior: "smooth",
       });
     }
@@ -53,15 +62,16 @@ function App() {
     toHome: scrollToHome,
     toServices: scrollToOurServices,
     toContact: scrollToContact,
+    toGetQuote: scrollToGetQuote,
   };
   return (
     <Layout navMethods={{ ...navigationMethods }}>
       <main className="" ref={homeRef}>
-        <Hero />
+        <Hero navMethods={{ ...navigationMethods }} />
         <SectionOne />
         <WhyChooseUs />
         <AboutUs aboutUsRef={aboutUsRef} />
-        <ContactUs contactUsRef={contactUseRef} />
+        <ContactUs contactUsRef={contactUsRef} getQuoteRef={getQuoteRef} />
         <OurServices serviceRef={ourServiceRef} />
         <RecentProject />
         <Testimonials />
