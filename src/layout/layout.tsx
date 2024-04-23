@@ -2,13 +2,12 @@ import { ReactNode, useState } from "react";
 import { TopNav } from "./top-nav";
 import { SideNav } from "./side-nav";
 
-export const Layout = ({
-  navMethods,
-  children,
-}: {
+interface ILayout {
   navMethods: any;
-  children: any;
-}) => {
+  children: ReactNode;
+}
+
+export const Layout = ({ navMethods, children }: ILayout) => {
   const [openNav, setOpenNav] = useState(false);
   return (
     <div className="">
