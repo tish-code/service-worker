@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { TopNav } from "./top-nav";
 import { SideNav } from "./side-nav";
 
@@ -7,7 +7,7 @@ interface ILayout {
   children: ReactNode;
 }
 
-export const Layout = ({ navMethods, children }: ILayout) => {
+export const Layout: React.FC<ILayout> = ({ navMethods, children }) => {
   const [openNav, setOpenNav] = useState(false);
   return (
     <div className="">
