@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Hero = (props: any) => {
   const { navMethods } = props;
   return (
@@ -8,20 +10,40 @@ export const Hero = (props: any) => {
       >
         <div className="flex  flex-col">
           <div className="flex justify-between mb-[2em]">
-            <p className="text-[0.7em] tracking-widest ">
+            <motion.p
+              className="text-[0.7em] tracking-widest "
+              initial={{ x: -70, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               SOLAR<span className="text-[#FDB813]">ONE</span> - SOLAR &
               RENEWABLE ENERGY
-            </p>
-            <p className="hidden text-[0.7em] tracking-widest md:flex">
+            </motion.p>
+            <motion.p
+              initial={{ x: 70, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="hidden text-[0.7em] tracking-widest md:flex"
+            >
               Best Quality Renewable Energy
-            </p>
+            </motion.p>
           </div>
           <div className="lg:px-[4em] flex md:justify-center mb-[4em]">
-            <p className="text-[1.7em] md:text-[2.5em] max-w-[15em] font-large">
+            <motion.p
+              initial={{ x: -70, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-[1.7em] md:text-[2.5em] max-w-[15em] font-large"
+            >
               Powering a Sustainable Future, One Panel at a Time.
-            </p>
+            </motion.p>
           </div>
-          <div className="max-w-[30em] text-[1em]">
+          <motion.div
+            initial={{ x: -70, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="max-w-[30em] text-[1em]"
+          >
             <p className="mb-[2em]">
               We believe in a future powered by clean, renewable energy. Empower
               Your Future with Solar Energy. Join the Renewable Revolution
@@ -41,7 +63,7 @@ export const Hero = (props: any) => {
                 Get Quote
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
