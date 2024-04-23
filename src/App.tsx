@@ -52,7 +52,7 @@ function App() {
   const scrollToGetQuote = () => {
     if (getQuoteRef.current) {
       window.scrollTo({
-        top: getQuoteRef.current.offsetTop - 64,
+        top: getQuoteRef.current.offsetTop - 80,
         behavior: "smooth",
       });
     }
