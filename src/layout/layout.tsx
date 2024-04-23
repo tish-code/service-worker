@@ -7,7 +7,7 @@ export const Layout = ({
   children,
 }: {
   navMethods: any;
-  children: ReactNode;
+  children: any;
 }) => {
   const [openNav, setOpenNav] = useState(false);
   return (

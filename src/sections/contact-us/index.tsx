@@ -23,7 +23,7 @@ export const ContactUs = (props: any) => {
     >
       <div className="flex flex-col p-[2em] bg-dark gap-[4em] flex-1 rounded-2xl">
         <div className="flex flex-col gap-1">
-          <p className="text-[1.3em] font-semibold">Contact Information</p>
+          <p className="text-[1.5em] font-semibold">Contact Information</p>
           <p className="text-[0.8em]">
             Call or send a message to start a live chart
           </p>
@@ -100,7 +100,7 @@ export const ContactUs = (props: any) => {
       {/* <div className="bg-white"></div> */}
       <div className="flex flex-col p-[2em] gap-[2em] text-dark flex-1">
         <div className="flex flex-col gap-1">
-          <p className="text-[1.3em] font-semibold">Get Quote</p>
+          <p className="text-[1.5em] font-semibold">Get Quote</p>
           <p className="text-[0.8em]">
             Write to us your needs and we'll email you the quotes. It's free!
           </p>
