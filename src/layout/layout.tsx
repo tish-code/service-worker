@@ -3,11 +3,16 @@ import { TopNav } from "./top-nav";
 import { SideNav } from "./side-nav";
 
 interface ILayout {
-  navMethods: any;
   children: ReactNode;
+  navMethods?: {
+    toAbout: () => void;
+    toHome: () => void;
+    toServices: () => void;
+    toContact: () => void;
+  };
 }
 
-export const Layout: React.FC<ILayout> = ({ navMethods, children }) => {
+export const Layout: React.FC<ILayout> = ({ children, navMethods }) => {
   const [openNav, setOpenNav] = useState(false);
   return (
     <div className="">

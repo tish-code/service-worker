@@ -55,7 +55,7 @@ function App() {
     toContact: scrollToContact,
   };
   return (
-    <Layout navMethods={navigationMethods}>
+    <Layout navMethods={{ ...navigationMethods }}>
       <main className="" ref={homeRef}>
         <Hero />
         <SectionOne />
