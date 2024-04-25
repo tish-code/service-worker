@@ -3,7 +3,6 @@ import mail from "../../assets/mail.svg";
 import location from "../../assets/location.svg";
 import { useState } from "react";
 import { FormControl, TextField } from "@material-ui/core";
-import { motion } from "framer-motion";
 
 const contacts = [
   { icon: phone, contact: "+1012 3456 789" },
@@ -18,17 +17,17 @@ export const ContactUs = (props: any) => {
   const [isDark1, setIsDark1] = useState(false);
   const [isDark2, setIsDark2] = useState(false);
   const [isDark3, setIsDark3] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
   return (
     <div
       className="flex flex-col lg:flex-row gap-[2em] lg:px-[8em] py-[4em] px-[1em]"
       ref={contactUsRef}
     >
-      <motion.div
-        initial={{ x: -100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.7, type: "spring", delay: 0.3 }}
-        className="flex flex-col p-[2em] bg-dark gap-[4em] flex-1 rounded-2xl"
-      >
+      <div className="flex flex-col p-[2em] bg-dark gap-[4em] flex-1 rounded-2xl">
         <div className="flex flex-col gap-1">
           <p className="text-[1.5em] font-semibold">Contact Information</p>
           <p className="text-[0.8em]">
@@ -103,12 +102,9 @@ export const ContactUs = (props: any) => {
             </svg>
           </div>
         </div>
-      </motion.div>
+      </div>
       {/* Get Quote Section */}
-      <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.7, type: "spring", delay: 0.3 }}
+      <div
         className="flex flex-col p-[2em] gap-4 text-dark flex-1"
         ref={getQuoteRef}
       >
@@ -120,25 +116,53 @@ export const ContactUs = (props: any) => {
         </div>
         <div className="flex flex-col gap-6">
           <div className="flex gap-[2em]">
-            <TextField label="First Name" />
-            <TextField label="Last Name" />
+            <TextField
+              label="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            <TextField
+              label="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
           </div>
           <div className="flex gap-[2em]">
-            <TextField label="Email" />
-            <TextField label="Phone Number" />
+            <TextField
+              label="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              label="Phone Number"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
           </div>
           <FormControl fullWidth>
             <TextField
               multiline
+              maxRows={3}
               label="Message"
+              value={message}
               placeholder="write us a message"
+              onChange={(e) => setMessage(e.target.value)}
             />
           </FormControl>
-          <button className="bg-dark bg-opacity-90 hover:bg-opacity-100 transition duration-300 text-white shrink py-3 px-3 font-semibold rounded-md ml-auto">
+          <button
+            className="bg-dark bg-opacity-90 hover:bg-opacity-100 transition duration-300 text-white shrink py-3 px-3 font-semibold rounded-md ml-auto"
+            onClick={() => {
+              setEmail("");
+              setFirstName("");
+              setLastName("");
+              setPhoneNumber("");
+              setMessage("");
+            }}
+          >
             Send Message
           </button>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

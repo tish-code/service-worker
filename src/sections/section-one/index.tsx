@@ -1,5 +1,4 @@
 import rectangle3 from "../../assets/rectangle3.png";
-import { motion } from "framer-motion";
 
 const stats = [
   { sn: "01/", text: "Collaborate with 100+ leading" },
@@ -10,12 +9,7 @@ const stats = [
 export const SectionOne = () => {
   return (
     <div className="px-[1em] lg:px-[8em] text-dark py-[4em] flex flex-col md:flex-row gap-[2em]  justify-between">
-      <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        className="flex flex-col gap-[1.5em] flex-1"
-      >
+      <div className="flex flex-col gap-[1.5em] flex-1">
         <p className="text-[1.7em] md:text-[2.2em] font-semibold font-large">
           The Friendliest Installers in the West
         </p>
@@ -37,15 +31,10 @@ export const SectionOne = () => {
             );
           })}
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        className="flex flex-1 max-w-[550px] justify-center"
-      >
+      </div>
+      <div className="flex flex-1 max-w-[550px] justify-center">
         <img src={rectangle3} alt="solar" className="w-[80%]" />
-      </motion.div>
+      </div>
     </div>
   );
 };

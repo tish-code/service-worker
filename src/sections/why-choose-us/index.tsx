@@ -1,6 +1,5 @@
 import sun from "../../assets/sun.svg";
 import icon from "../../assets/Icon.svg";
-import { motion } from "framer-motion";
 
 const whatWeOffer = [
   {
@@ -20,12 +19,7 @@ const whatWeOffer = [
 export const WhyChooseUs = () => {
   return (
     <div className="px-[1em] text-dark lg:px-[8em] py-[4em] bg-gray-400 bg-opacity-30 flex flex-col gap-[2em]">
-      <motion.div
-        initial={{ y: 40, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
-        className="flex flex-col gap-[1em]"
-      >
+      <div className="flex flex-col gap-[1em]">
         <p className="text-[#0362fc] flex items-center gap-2 text-[0.7em]">
           <span>
             <img src={sun} alt="" />
@@ -35,31 +29,22 @@ export const WhyChooseUs = () => {
         <p className="text-[1.7em] md:text-[2.2em] font-large max-w-[500px]">
           A Positive Impact for Your Home and the Planet
         </p>
-      </motion.div>
+      </div>
       <div className="flex flex-col gap-[1em] md:flex-row">
         {whatWeOffer.map((item, index) => {
           return (
-            <motion.div
-              initial={{ y: 40, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              key={index}
-              className="flex flex-col gap-[0.7em] flex-1"
-            >
+            <div key={index} className="flex flex-col gap-[0.7em] flex-1">
               <img src={icon} alt="" className="w-[3em]" />
               <p className="font-semibold text-[1.1em]">{item.title}</p>
               <p className="text-[0.9em]">{item.text}</p>
-            </motion.div>
+            </div>
           );
         })}
       </div>
-      <motion.div
-        initial={{ y: 10, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.7 }}
+      <div
         className="border flex 
         border-[#a1a1a1]"
-      ></motion.div>
+      />
     </div>
   );
 };
